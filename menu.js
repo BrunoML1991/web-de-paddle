@@ -11,24 +11,31 @@ jQuery(function () {
     });
     jQuery(function () {
         jQuery("#inicio").click(function () {
-            jQuery.get("main_page/main_page.html",function (html) {
+            jQuery.get("main_page/main_page.html", function (html) {
                 jQuery("#main_page").html(html);
             });
         });
     });
     jQuery(function () {
         jQuery("#logo").click(function () {
-            jQuery.get("main_page/main_page.html",function (html) {
+            jQuery.get("main_page/main_page.html", function (html) {
+                jQuery("#main_page").html(html);
+            });
+        });
+    });
+    jQuery(function () {
+        jQuery("#instalaciones").click(function () {
+            jQuery.get("instalaciones/instalaciones.html", function (html) {
                 jQuery("#main_page").html(html);
             });
         });
     });
     jQuery("#main_page").position({
-        my:"center top+20",
-        at:"center bottom",
-        of:"#nav"
+        my: "center top+20",
+        at: "center bottom",
+        of: "#nav"
     });
-    jQuery.get("main_page/main_page.html",function (html) {
+    jQuery.get("main_page/main_page.html", function (html) {
         jQuery("#main_page").html(html);
     });
 });

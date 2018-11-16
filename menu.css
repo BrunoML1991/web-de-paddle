@@ -6,10 +6,12 @@ img#background {
     left: 0;
     z-index: 0;
 }
-#logo{
+
+#logo {
     width: 40px;
     height: 50px;
 }
+
 #main_page {
     position: absolute;
     z-index: 10;
