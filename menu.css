@@ -18,4 +18,8 @@ img#background {
         margin-left: -400px;
     }
 }
+#main_page {
+    position: absolute;
+    z-index: 10;
+}
 
