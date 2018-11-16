@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" HREF="menu.css">
+</head>
+<body>
+<img id="background" src="https://padeladdict.com/wp-content/uploads/2015/03/portada-airpro-padel.jpg">
+<nav id="nav" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">
+        <img id="logo" src="logo.gif">
+    </a>
+    <ul class="navbar-nav">
+        <li id="inicio" class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Instalaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Reservas</a></li>
+    </ul>
+    <ul id="right_nav" class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Registro</a></li>
+        <li class="nav-item" id="log_in"><a class="nav-link" href="#">Login</a></li>
+    </ul>
+</nav>
+<div id="main_page" class="container-fluid">
+    <div class="center-block">
+        <img id="pista_padel" src="pista_padel.jpg" alt="Pista de padel">
+        <img id="etsisi_logo" src="etsisi_logo.jpg" alt="Logo etsisi">
+        <div id="paddle_text">
+            <h1>Paddle UPM</h1>
+            <p>El club universitario más dinámico del circuito</p>
+        </div>
+    </div>
+
+    <article id="main_text" class="row">
+        <article class="col-sm-3 text-justify">
+            <h4 class="bg-success text-center">Clases</h4>
+            <div id="lessons_div" class="text_back">
+                <p>El conjunto de monitores más cualificados se encargará de darte la formaci&oacute;n en cuanto a
+                    técnica
+                    requerida
+                    en este deporte. Las clases pr&aacute;cticas te permiti&aacute;n interiorizar los movimientos
+                    adecuados
+                    como si fuesen naturales.</p>
+                <p>Las clases colectivas convierten las clases en un espacio din&aacute;mico en el que jugar se
+                    convierte en
+                    una actividad placentera y divertida.</p>
+            </div>
+        </article>
+        <article class="col-sm-3 text-justify">
+            <h4 class="bg-success text-center">Entrenamientos personalizados</h4>
+            <div id="personal_lessons_div" class="text_back">
+                <p>Si te sientes un campe&oacute;n, de verdad lo eres o simplemente quieres avanzar r&aacute;pidamente
+                    en la
+                    t&eacute;cnica que rodea a este deporte te podemos configurar sesiones de entranamiento a tu medida
+                    con
+                    un
+                    entrenador personal que se encargará de: </p>
+                <ul>
+                    <li>Enseñarte la t&eacute;cnica adecuada para mejorar tus golpes</li>
+                    <li>Enseñarte a combinar la potencia con la t&eacute;cnica</li>
+                    <li>Mostrarte como mejorar el rendimiento en equipo</li>
+                    <li>Explicarte como utilizar la presi&oacute;n de los campeonatos en tu beneficio</li>
+                </ul>
+            </div>
+        </article>
+        <article class="col-sm-3 text-justify">
+            <h4 class="bg-success text-center">Campeonatos</h4>
+            <div id="championship_div" class="text_back">
+                <p>El club organiza campeonatos peri&oacute;dicos en los que te puedes divertir al mismo tiempo que
+                    mejoras
+                    en el deporte. Tenemos campeonatos de un d&iacute;a, de fin de semana y ligas regulares. Puedes
+                    participar
+                    en los torneos masculinos, femeninos y mixtos</p>
+            </div>
+        </article>
+    </article>
+    <script type='text/javascript' src="main_page.js"></script>
+    <link rel="stylesheet" type="text/css" HREF="main_page.css">
+</div>
+</img>
+<script>
+    jQuery("#right_nav").position({
+        my: "right-10",
+        at: "right",
+        of: "#nav"
+    });
+</script>
+</body>
+</html>
