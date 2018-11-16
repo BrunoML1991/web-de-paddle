@@ -25,14 +25,4 @@ jQuery(function () {
         at: "right bottom+60",
         of: "#etsisi_logo"
     });
-    jQuery("#main_text").position({
-        my: "right+9% top",
-        at: "right bottom+20",
-        of: "#pista_padel"
-    });
-    jQuery("#lessons_div").position({
-        my:"center top",
-        at:"center top",
-        of:"#lessons_back"
-    });
 });

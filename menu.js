@@ -1,7 +1,7 @@
 jQuery(function () {
     jQuery("#right_nav").position({
-        my: "right-10",
-        at: "right",
+        my: "right center",
+        at: "right-30 center",
         of: "#nav"
     });
     jQuery(function () {
