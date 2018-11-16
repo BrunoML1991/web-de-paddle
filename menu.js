@@ -30,6 +30,13 @@ jQuery(function () {
             });
         });
     });
+    jQuery(function () {
+        jQuery("#registro").click(function () {
+            jQuery.get("registro/registro.html", function (html) {
+                jQuery("#main_page").html(html);
+            });
+        });
+    });
     jQuery("#main_page").position({
         my: "center top+20",
         at: "center bottom",
