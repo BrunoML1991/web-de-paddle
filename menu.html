@@ -3,12 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="menu.js"></script>
     <link rel="stylesheet" type="text/css" HREF="menu.css">
+
 </head>
 <body>
 <img id="background" src="https://padeladdict.com/wp-content/uploads/2015/03/portada-airpro-padel.jpg">
@@ -21,13 +27,55 @@
         <li id="instalaciones" class="nav-item"><a class="nav-link" href="#">Instalaciones</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Reservas</a></li>
     </ul>
-    <ul id="right_nav" class="navbar-nav">
-        <li id="registro" class="nav-item"><a class="nav-link" href="#">Registro</a></li>
-        <li class="nav-item" id="log_in"><a class="nav-link" href="#">Login</a></li>
-    </ul>
+    <div id="right_nav" class="row">
+        <ul class="navbar-nav">
+            <li id="registro" class="nav-item"><a class="nav-link" href="#">Registro</a></li>
+        </ul>
+        <button id="log-in" type="button" data-toggle="modal" data-target="#myModal">
+            Log-In
+        </button>
+    </div>
 </nav>
 <div id="main_page" class="container-fluid">
 </div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Datos de acceso:</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username">Usuario: </label>
+                        <input type="text" id="username" class="form-control" required
+                               placeholder="Escriba su nombre de usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Clave: </label>
+                        <input type="password" id="password" class="form-control" required
+                               placeholder="Escriba su contraseña">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button id="log-in-modal" type="button" class="btn btn-success">Entrar</button>
+                <button id="close-modal" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 </img>
 </body>
 </html>

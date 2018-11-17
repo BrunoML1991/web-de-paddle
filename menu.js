@@ -5,11 +5,6 @@ jQuery(function () {
         of: "#nav"
     });
     jQuery(function () {
-        jQuery("#log_in").click(function () {
-            jQuery("#main_page").load('Previo/login.html')
-        });
-    });
-    jQuery(function () {
         jQuery("#inicio").click(function () {
             jQuery.get("main_page/main_page.html", function (html) {
                 jQuery("#main_page").html(html);
@@ -44,5 +39,24 @@ jQuery(function () {
     });
     jQuery.get("main_page/main_page.html", function (html) {
         jQuery("#main_page").html(html);
+    });
+    jQuery (function () {
+        jQuery("#log-in-modal").click(function () {
+            jQuery.getJSON("http://fenw.etsisi.upm.es:1723/users/login",
+                "username="+jQuery("#username").val()+"&password="+jQuery("#password").val())
+                .done(function (dato){
+                    console.log("El token "+dato);
+                    jQuery("#close-modal").click();
+                })
+                .fail(function (e) {
+                    console.log(e);
+                    jQuery("#username").attr("placeholder", "Usuario o contraseña inválidos");
+                    jQuery("#username").addClass('red-placeholder');
+                    jQuery("#username").val("")
+                    jQuery("#password").attr("placeholder", "Usuario o contraseña inválidos");
+                    jQuery("#password").addClass('red-placeholder');
+                    jQuery("#password").val("")
+                })
+        });
     });
 });

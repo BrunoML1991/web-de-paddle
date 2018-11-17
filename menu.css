@@ -16,4 +16,12 @@ img#background {
     position: absolute;
     z-index: 10;
 }
+#log-in{
+    color: #979a9b;
+    background-color: #343a40;
+    border: black;
+}
+.red-placeholder::-webkit-input-placeholder {
+    color: red;
+}
 
