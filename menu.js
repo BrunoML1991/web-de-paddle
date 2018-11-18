@@ -41,23 +41,30 @@ jQuery(function () {
         jQuery("#main_page").html(html);
     });
     jQuery("#log-in-modal").click(function () {
-        jQuery.getJSON("http://fenw.etsisi.upm.es:1723/users/login",
-            "username=" + jQuery("#username").val() + "&password=" + jQuery("#password").val())
-            .done(function (dato, textStatus, jqXHR) {
-                sessionStorage.setItem("token", jqXHR.getResponseHeader("Authorization").toString());
-                jQuery("#log-in").html("Log-Out");
-                jQuery("#log-in").attr("data-target", "#modal-out");
-                jQuery("#close-modal").click();
-            })
-            .fail(function (e) {
-                console.log(e);
-                jQuery("#username").attr("placeholder", "Usuario o contraseña inválidos");
-                jQuery("#username").addClass('red-placeholder');
-                jQuery("#username").val("");
-                jQuery("#password").attr("placeholder", "Usuario o contraseña inválidos");
-                jQuery("#password").addClass('red-placeholder');
-                jQuery("#password").val("");
-            })
+        if (jQuery("#username").val() == "") {
+            jQuery("#username").attr("placeholder", "Usuario requerido").addClass('red-placeholder');
+        }
+        if (jQuery("#password").val() == "") {
+            jQuery("#password").attr("placeholder", "Contraseña requerida").addClass('red-placeholder');
+        } if (jQuery("#username").val() != "" || jQuery("#password").val() != "") {
+            console.log(jQuery("#username").val()+" "+jQuery("#password").val());
+            jQuery.getJSON("http://fenw.etsisi.upm.es:1723/users/login",
+                "username=" + jQuery("#username").val() + "&password=" + jQuery("#password").val())
+                .done(function (dato, textStatus, jqXHR) {
+                    sessionStorage.setItem("token", jqXHR.getResponseHeader("Authorization").toString());
+                    jQuery("#log-in").html("Log-Out").attr("data-target", "#modal-out");
+                    jQuery("#close-modal").click();
+                })
+                .fail(function (e) {
+                    console.log(e);
+                    jQuery("#username").attr("placeholder", "Usuario o contraseña inválidos")
+                        .addClass('red-placeholder')
+                        .val("");
+                    jQuery("#password").attr("placeholder", "Usuario o contraseña inválidos")
+                        .addClass('red-placeholder')
+                        .val("");
+                })
+        }
     });
     jQuery("#log-out-modal").click(function () {
         sessionStorage.removeItem("token");
