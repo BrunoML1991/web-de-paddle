@@ -1,21 +1,33 @@
 img#background {
-    min-height: 100%;
-    min-width: 800px;
     width: 100%;
-    height: auto;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
 }
-#logo{
+
+#logo {
     width: 40px;
     height: 50px;
 }
-@media screen and (max-width: 800px) {
-    img#background {
-        left: 50%;
-        margin-left: -400px;
-    }
+
+#main_page {
+    position: absolute;
+    z-index: 10;
+}
+
+#log-in {
+    color: #979a9b;
+    background-color: #343a40;
+    border: black;
+}
+
+.red-placeholder::-webkit-input-placeholder {
+    color: red;
+}
+
+#droppable {
+    height: 100px;
 }
 
