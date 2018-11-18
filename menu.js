@@ -46,7 +46,7 @@ jQuery(function () {
             .done(function (dato, textStatus, jqXHR) {
                 sessionStorage.setItem("token", jqXHR.getResponseHeader("Authorization").toString());
                 jQuery("#log-in").html("Log-Out");
-                jQuery("#log-in").attr("data-target","#modal-out");
+                jQuery("#log-in").attr("data-target", "#modal-out");
                 jQuery("#close-modal").click();
             })
             .fail(function (e) {
@@ -62,7 +62,24 @@ jQuery(function () {
     jQuery("#log-out-modal").click(function () {
         sessionStorage.removeItem("token");
         jQuery("#log-in").html("Log-In");
-        jQuery("#log-in").attr("data-target","#modal-in");
+        jQuery("#log-in").attr("data-target", "#modal-in");
         jQuery("#close-modal-out").click();
-    })
+    });
+    jQuery("#reservas").click(function () {
+        if (sessionStorage.getItem("token") == null) {
+            jQuery("#main_page").html("<p style='background-color: aliceblue'>Ha de estar loggeado para accecer a este contenido</p>");
+        } else {
+            jQuery("#main_page").html("<p style='background-color: aliceblue'>Página en construcción</p>");
+        }
+    });
+    jQuery("#modal-logo").draggable();
+    jQuery("#droppable").droppable({
+        drop: function (event, ui) {
+            jQuery(this)
+                .addClass("ui-state-highlight")
+                .find("p")
+                .html("¡Botón activado!");
+            jQuery("#log-in-modal").prop('disabled', false);
+        }
+    });
 });

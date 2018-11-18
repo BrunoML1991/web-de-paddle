@@ -27,3 +27,7 @@ img#background {
     color: red;
 }
 
+#droppable {
+    height: 100px;
+}
+

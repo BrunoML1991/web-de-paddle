@@ -19,13 +19,11 @@
 <body>
 <img id="background" src="https://padeladdict.com/wp-content/uploads/2015/03/portada-airpro-padel.jpg">
 <nav id="nav" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">
-        <img id="logo" src="logo.gif">
-    </a>
+    <a class="navbar-brand" href="#"> <img id="logo" src="img/logo.gif"> </a>
     <ul class="navbar-nav">
         <li id="inicio" class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
         <li id="instalaciones" class="nav-item"><a class="nav-link" href="#">Instalaciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Reservas</a></li>
+        <li id="reservas" class="nav-item"><a class="nav-link" href="#">Reservas</a></li>
     </ul>
     <div id="right_nav" class="row">
         <ul class="navbar-nav">
@@ -64,11 +62,19 @@
                                placeholder="Escriba su contraseña">
                     </div>
                 </form>
+                <div>
+                    <div id="modal-logo" class="container-fluid">
+                        <img id="etsisi_logo_modal" class="col-sm-4" src="img/etsisi_logo.jpg" alt="Logo etsisi">
+                    </div>
+                    <div id="droppable" class="ui-widget-header">
+                        <p>Arrastra el logo de la etsisi aquí para activar el boton</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button id="log-in-modal" type="button" class="btn btn-success">Entrar</button>
+                <button id="log-in-modal" type="button" class="btn btn-success" disabled>Entrar</button>
                 <button id="close-modal" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 
